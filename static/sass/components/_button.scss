@@ -16,7 +16,7 @@
 		background-color: transparent;
 		border-radius: _size(border-radius);
 		border: 0;
-		box-shadow: inset 0 0 0 _size(border-width) _palette(border);
+		box-shadow: inset side-values(0 0 0 _size(border-width) _palette(border));
 		color: _palette(fg-bold) !important;
 		cursor: pointer;
 		display: inline-block;
@@ -26,7 +26,7 @@
 		letter-spacing: _font(letter-spacing);
 		line-height: _size(element-height);
 		outline: 0;
-		padding: 0 1.25rem 0 (1.25rem + (_font(letter-spacing) * 0.5));
+		padding: side-values(0 1.25rem 0 (1.25rem + (_font(letter-spacing) * 0.5)));
 		text-align: center;
 		text-decoration: none;
 		text-transform: uppercase;
@@ -42,13 +42,13 @@
 
 		&.icon {
 			&:before {
-				margin-right: 0.5em;
+				margin-#{dir(right)}: 0.5em;
 			}
 		}
 
 		&.fit {
 			display: block;
-			margin: 0 0 (_size(element-margin) * 0.5) 0;
+			margin: side-values(0 0 (_size(element-margin) * 0.5) 0);
 			width: 100%;
 		}
 

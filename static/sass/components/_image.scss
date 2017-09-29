@@ -20,7 +20,7 @@
 			content: '';
 			display: block;
 			height: 100%;
-			left: 0;
+			#{dir(left)}: 0;
 			opacity: 0.5;
 			position: absolute;
 			top: 0;
@@ -55,7 +55,7 @@
 
 		&.fit {
 			display: block;
-			margin: 0 0 _size(element-margin) 0;
+			margin: side-values(0 0 _size(element-margin) 0);
 			width: 100%;
 
 			img {

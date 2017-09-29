@@ -9,41 +9,41 @@
 	form {
 		$gutter: _size(element-margin) * 0.75;
 
-		margin: 0 0 (_size(element-margin) * 1.25) 0;
+		margin: side-values(0 0 (_size(element-margin) * 1.25) 0);
 
 		.field {
-			margin: 0 0 ($gutter * 1) 0;
+			margin: side-values(0 0 ($gutter * 1) 0);
 
 			&.half {
 				width: 50%;
-				float: left;
-				padding: 0 0 0 ($gutter * 1 * 0.5);
+				float: dir(left);
+				padding: side-values(0 0 0 ($gutter * 1 * 0.5));
 
 				&.first {
-					padding: 0 ($gutter * 1 * 0.5) 0 0;
+					padding: side-values(0 ($gutter * 1 * 0.5) 0 0);
 				}
 			}
 		}
 
 		> .actions {
-			margin: ($gutter * 1.25) 0 0 0 !important;
+			margin: side-values(($gutter * 1.25) 0 0 0) !important;
 		}
 
 		@include breakpoint(small) {
 			.field {
-				margin: 0 0 ($gutter * 0.75) 0;
+				margin: side-values(0 0 ($gutter * 0.75) 0);
 
 				&.half {
-					padding: 0 0 0 ($gutter * 0.75 * 0.5);
+					padding: side-values(0 0 0 ($gutter * 0.75 * 0.5));
 
 					&.first {
-						padding: 0 ($gutter * 0.75 * 0.5) 0 0;
+						padding: side-values(0 ($gutter * 0.75 * 0.5) 0 0);
 					}
 				}
 			}
 
 			> .actions {
-				margin: ($gutter * 1) 0 0 0 !important;
+				margin: side-values(($gutter * 1) 0 0 0) !important;
 			}
 		}
 
@@ -69,7 +69,7 @@
 		font-weight: _font(weight);
 		letter-spacing: _font(letter-spacing);
 		line-height: 1.5;
-		margin: 0 0 (_size(element-margin) * 0.5) 0;
+		margin: side-values(0 0 (_size(element-margin) * 0.5) 0);
 		text-transform: uppercase;
 	}
 
@@ -102,7 +102,7 @@
 		&:focus {
 			background: _palette(border-bg);
 			border-color: _palette(fg-bold);
-			box-shadow: 0 0 0 _size(border-width) _palette(fg-bold);
+			box-shadow: side-values(0 0 0 _size(border-width) _palette(fg-bold));
 		}
 	}
 
@@ -127,7 +127,7 @@
 			line-height: calc(#{_size(element-height)} + 0em);
 			pointer-events: none;
 			position: absolute;
-			right: 0;
+			#{dir(right)}: 0;
 			text-align: center;
 			top: 0;
 			width: _size(element-height);
@@ -153,8 +153,8 @@
 	input[type="radio"], {
 		@include vendor('appearance', 'none');
 		display: block;
-		float: left;
-		margin-right: -2rem;
+		float: dir(left);
+		margin-#{dir(right)}: -2rem;
 		opacity: 0;
 		width: 1rem;
 		z-index: -1;
@@ -167,9 +167,9 @@
 			display: inline-block;
 			font-size: 0.8rem;
 			font-weight: _font(weight);
-			margin: 0 0 (_size(element-margin) * 0.25) 0;
-			padding-left: (_size(element-height) * 0.6) + 1rem;
-			padding-right: 0.75rem;
+			margin: side-values(0 0 (_size(element-margin) * 0.25) 0);
+			padding-#{dir(left)}: (_size(element-height) * 0.6) + 1rem;
+			padding-#{dir(right)}: 0.75rem;
 			position: relative;
 
 			&:before {
@@ -183,7 +183,7 @@
 				content: '';
 				display: inline-block;
 				height: (_size(element-height) * 0.6);
-				left: 0;
+				#{dir(left)}: 0;
 				//line-height: (_size(element-height) * 0.575);
 				line-height: calc(#{_size(element-height) * 0.575} + 0em);
 				position: absolute;
@@ -206,7 +206,7 @@
 			&:before {
 				background: _palette(border-bg);
 				border-color: _palette(fg-bold);
-				box-shadow: 0 0 0 _size(border-width) _palette(fg-bold);
+				box-shadow: side-values(0 0 0 _size(border-width) _palette(fg-bold));
 			}
 		}
 	}
