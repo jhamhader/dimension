@@ -16,7 +16,7 @@
 
 			&.half {
 				width: 50%;
-				float: left;
+				float: right;
 				padding: 0 0 0 ($gutter * 1 * 0.5);
 
 				&.first {
@@ -153,8 +153,8 @@
 	input[type="radio"], {
 		@include vendor('appearance', 'none');
 		display: block;
-		float: left;
-		margin-right: -2rem;
+		float: right;
+		margin-left: -2rem;
 		opacity: 0;
 		width: 1rem;
 		z-index: -1;
@@ -168,8 +168,8 @@
 			font-size: 0.8rem;
 			font-weight: _font(weight);
 			margin: 0 0 (_size(element-margin) * 0.25) 0;
-			padding-left: (_size(element-height) * 0.6) + 1rem;
-			padding-right: 0.75rem;
+			padding-right: (_size(element-height) * 0.6) + 1rem;
+			padding-left: 0.75rem;
 			position: relative;
 
 			&:before {
@@ -183,7 +183,7 @@
 				content: '';
 				display: inline-block;
 				height: (_size(element-height) * 0.6);
-				left: 0;
+				right: 0;
 				//line-height: (_size(element-height) * 0.575);
 				line-height: calc(#{_size(element-height) * 0.575} + 0em);
 				position: absolute;
